@@ -10,13 +10,13 @@ app = Flask(__name__)
 def main():
     return render_template('app.html')
 
-@app.route('/signature_verification1', methods=['GET', 'POST'])
+@app.route('/signature_verification1', methods=['POST'])
 def signature_verification1():
     global image_data1
     image_data1 = request.form['image_data1']
     return 'hi'
 
-@app.route('/signature_verification2', methods=['GET', 'POST'])
+@app.route('/signature_verification2', methods=[ 'POST'])
 def signature_verification2():
     global image_data2
     image_data2 = request.form['image_data2']

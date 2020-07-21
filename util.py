@@ -43,7 +43,7 @@ def preprocess(img):
 
 def verify(img1_base64,img2_base64):
     
-    global __model
+  
     
     img1 = get_cv2_image_from_base64_string(img1_base64)
     

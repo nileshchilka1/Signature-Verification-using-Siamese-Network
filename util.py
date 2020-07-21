@@ -6,7 +6,7 @@ from keras.models import load_model
 import tensorflow as tf
 from PIL import Image
 
-model = None
+__model = None
 
 sess = tf.Session()
 graph = tf.get_default_graph()
@@ -43,7 +43,7 @@ def preprocess(img):
 
 def verify(img1_base64,img2_base64):
     
-    global model
+    global __model
     
     img1 = get_cv2_image_from_base64_string(img1_base64)
     
@@ -100,12 +100,12 @@ def triplet_loss(y_true, y_pred, alpha = 0.2):
 def load_saved_artifacts():
     print("loading saved artifacts...start")
 
-    global model
-    if model is None:
+    global __model
+    if __model is None:
             global sess
             set_session(sess)
-            model = load_model('artifacts/FRmodel.h5',custom_objects={'triplet_loss': triplet_loss})
-            model._make_predict_function()
+            __model = load_model('artifacts/FRmodel.h5',custom_objects={'triplet_loss': triplet_loss})
+            __model._make_predict_function()
             graph = tf.get_default_graph()
     print("loading saved artifacts...done")
 
@@ -114,14 +114,14 @@ def load_saved_artifacts():
 def img_to_encoding(img1):
     global graph
     global sess
-    global model
+    global __model
     img = img1[...,::-1]
     img = np.around(np.transpose(img, (2,0,1))/255.0, decimals=12)
     x_train = np.array([img])
     
     with graph.as_default():
         set_session(sess)
-        embedding = model.predict(x_train)
+        embedding = __model.predict(x_train)
     return embedding
 
 

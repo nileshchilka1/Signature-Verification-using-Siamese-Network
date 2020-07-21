@@ -40,9 +40,24 @@ def preprocess(img):
 
     return img
 
+def load_saved_artifacts():
+    print("loading saved artifacts...start")
+
+    global __model
+    if __model is None:
+            global sess
+            set_session(sess)
+            __model = load_model('artifacts/FRmodel.h5',custom_objects={'triplet_loss': triplet_loss})
+            __model._make_predict_function()
+            graph = tf.get_default_graph()
+    print("loading saved artifacts...done")
+
 
 def verify(img1_base64,img2_base64):
     
+    global __model
+    if __model is None:
+        load_saved_artifacts()
   
     
     img1 = get_cv2_image_from_base64_string(img1_base64)
@@ -95,19 +110,6 @@ def triplet_loss(y_true, y_pred, alpha = 0.2):
  
     
     return loss
-
-
-def load_saved_artifacts():
-    print("loading saved artifacts...start")
-
-    global __model
-    if __model is None:
-            global sess
-            set_session(sess)
-            __model = load_model('artifacts/FRmodel.h5',custom_objects={'triplet_loss': triplet_loss})
-            __model._make_predict_function()
-            graph = tf.get_default_graph()
-    print("loading saved artifacts...done")
 
 
 

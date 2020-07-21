@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -711,11 +711,13 @@
             }, function (data, status) {
 
                 console.log(data);
+                if (!data || data.length == 0) {
+                    $("#error").show();
                     return;
                 }
 
 
-                // dz.removeFile(file);            
+                 dz1.removeFile(file);            
             });
         });
 
@@ -729,11 +731,13 @@
             }, function (data, status) {
 
                 console.log(data);
+                if (!data || data.length == 0) {
+                    $("#error").show();
                     return;
                 }
 
 
-                // dz.removeFile(file);            
+                 dz2.removeFile(file);            
             });
         });
 
@@ -748,6 +752,7 @@
 
     $(document).ready(function () {
         console.log("ready!");
+        $("#error").hide();
 
         init();
     });

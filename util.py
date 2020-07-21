@@ -117,6 +117,10 @@ def img_to_encoding(img1):
     global graph
     global sess
     global __model
+    
+    if __model is None:
+        load_saved_artifacts()
+    
     img = img1[...,::-1]
     img = np.around(np.transpose(img, (2,0,1))/255.0, decimals=12)
     x_train = np.array([img])

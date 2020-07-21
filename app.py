@@ -24,8 +24,6 @@ def signature_verification2():
 
 @app.route('/verify', methods=['GET', 'POST'])
 def verify():
-    global image_data2
-    global image_data1
     result = util.verify(image_data1,image_data2)
     return render_template('app.html', result=result)
 

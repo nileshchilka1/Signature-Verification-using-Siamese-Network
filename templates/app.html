@@ -711,9 +711,6 @@
             }, function (data, status) {
 
                 console.log(data);
-                if (!data || data.length == 0) {
-                    $("#divClassTable").hide();
-                    $("#error").show();
                     return;
                 }
 
@@ -732,9 +729,6 @@
             }, function (data, status) {
 
                 console.log(data);
-                if (!data || data.length == 0) {
-                    $("#divClassTable").hide();
-                    $("#error").show();
                     return;
                 }
 
@@ -754,9 +748,6 @@
 
     $(document).ready(function () {
         console.log("ready!");
-        $("#error").hide();
-        $("#resultHolder").hide();
-        $("#divClassTable").hide();
 
         init();
     });

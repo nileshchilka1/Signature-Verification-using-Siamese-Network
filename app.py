@@ -1,6 +1,4 @@
 from flask import Flask, request, render_template
-#import import_ipynb
-import tensorflow as tf
 import util
 image_data1 = None
 image_data2 = None

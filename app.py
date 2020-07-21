@@ -13,19 +13,27 @@ def main():
 @app.route('/signature_verification1', methods=['POST'])
 def signature_verification1():
     global image_data1
+    print('jjjjjjjjjjjjjjjjjjjjj')
     image_data1 = request.form['image_data1']
+    if image_data1 is None:
+        print('kkkkkkkkkkkkkkk')
     return 'hi'
 
 @app.route('/signature_verification2', methods=[ 'POST'])
 def signature_verification2():
     global image_data2
+    print('pppppppppppp')
     image_data2 = request.form['image_data2']
+    if image_data2 is None:
+        print('kkkkkkkkkkkkkkk')
     return 'hi'
 
 @app.route('/verify', methods=['GET'])
 def verify():
     global image_data1
     global image_data2
+    if image_data2 is None and image_data1 is None:
+        print('kkkkkkkkkkkkkkk')
     result = util.verify(image_data1,image_data2)
     return render_template('app.html', result=result)
 

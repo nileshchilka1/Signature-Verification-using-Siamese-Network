@@ -712,12 +712,13 @@
 
                 console.log(data);
                 if (!data || data.length == 0) {
+                    $("#divClassTable").hide();
                     $("#error").show();
                     return;
                 }
 
 
-                 dz1.removeFile(file);            
+                // dz.removeFile(file);            
             });
         });
 
@@ -732,12 +733,13 @@
 
                 console.log(data);
                 if (!data || data.length == 0) {
+                    $("#divClassTable").hide();
                     $("#error").show();
                     return;
                 }
 
 
-                 dz2.removeFile(file);            
+                // dz.removeFile(file);            
             });
         });
 
@@ -753,8 +755,11 @@
     $(document).ready(function () {
         console.log("ready!");
         $("#error").hide();
+        $("#resultHolder").hide();
+        $("#divClassTable").hide();
 
         init();
     });
 </script>
 </html>
+

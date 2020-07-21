@@ -704,7 +704,7 @@
         dz1.on("complete", function (file) {
             let imageData = file.dataURL;
 
-            var url = "http://127.0.0.1:5000/signature_verification1";
+            var url = "https://signature-verification-web-app.herokuapp.com/signature_verification1";
 
             $.post(url, {
                 image_data1: file.dataURL
@@ -725,7 +725,7 @@
         dz2.on("complete", function (file) {
             let imageData = file.dataURL;
 
-            var url = "http://127.0.0.1:5000/signature_verification2";
+            var url = "https://signature-verification-web-app.herokuapp.com/signature_verification2";
 
             $.post(url, {
                 image_data2: file.dataURL

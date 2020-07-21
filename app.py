@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 import import_ipynb
 import tensorflow as tf
 import util
@@ -22,7 +22,7 @@ def signature_verification2():
     image_data2 = request.form['image_data2']
     return 'hi'
 
-@app.route('/verify', methods=['GET', 'POST'])
+@app.route('/verify', methods=['GET'])
 def verify():
     global image_data1
     global image_data2

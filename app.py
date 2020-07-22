@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 from flask_cors import CORS
 import util
 image_data1 = None
@@ -14,19 +14,15 @@ def main():
 def signature_verification1():
     global image_data1
     image_data1 = request.form['image_data1']
-    response = jsonify(image_data1)
-    response.headers.add('Access-Control-Allow-Origin', '*')
 
-    return response
+    return 'done'
 
 @app.route('/signature_verification2', methods=['GET','POST'])
 def signature_verification2():
     global image_data2
     image_data2 = request.form['image_data2']
-    response = jsonify(image_data2)
-    response.headers.add('Access-Control-Allow-Origin', '*')
 
-    return response
+    return 'done'
 
 @app.route('/verify', methods=['GET','POST'])
 def verify():

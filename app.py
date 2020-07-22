@@ -14,21 +14,31 @@ def main():
 def signature_verification1():
     global image_data1
     image_data1 = request.form['image_data1']
+    
+    response = jsonify('done')
 
-    return 'done'
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
 
 @app.route('/signature_verification2', methods=['GET','POST'])
 def signature_verification2():
     global image_data2
     image_data2 = request.form['image_data2']
+    
+    response = jsonify('done')
 
-    return 'done'
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
 
 @app.route('/verify', methods=['GET','POST'])
 def verify():
     global image_data1
     global image_data2
     if image_data1 is None or image_data2 is None:
+        image_data1 = None
+        image_data2 = None
         return render_template('app.html', notupload='Upload the Image')
     else:
         result = util.verify(image_data1,image_data2)

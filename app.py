@@ -5,11 +5,6 @@ image_data1 = None
 image_data2 = None
 app = Flask(__name__)
 CORS(app)
-cors = CORS(app, resources={
-    r"/*": {
-       "origins": "*"
-    }
-}
 
 @app.route('/',methods=['GET','POST'])
 def main():

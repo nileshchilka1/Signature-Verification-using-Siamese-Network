@@ -7,6 +7,7 @@ click==7.1.2
 colorama==0.4.3
 decorator==4.4.2
 Flask==1.1.2
+flask_cors
 gast==0.2.2
 google-pasta==0.2.0
 grpcio==1.23.0

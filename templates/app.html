@@ -677,7 +677,7 @@
             maxFiles: 1,
             addRemoveLinks: true,
             dictDefaultMessage: "Some Message",
-            autoProcessQueue: false
+            autoProcessQueue: true
         });
 
         dz1.on("addedfile", function () {
@@ -704,16 +704,13 @@
             });
         });
         
-        $("#submitBtn1").on('click', function (e) {
-            dz1.processQueue();
-        });
         
         let dz2 = new Dropzone("#dropzone2", {
             url: "/",
             maxFiles: 1,
             addRemoveLinks: true,
             dictDefaultMessage: "Some Message",
-            autoProcessQueue: false
+            autoProcessQueue: true
         });
         
         dz2.on("addedfile", function () {
@@ -739,9 +736,6 @@
             });
         });
 
-        $("#submitBtn2").on('click', function (e) {
-            dz2.processQueue();
-        });
     }
 
     $(document).ready(function () {

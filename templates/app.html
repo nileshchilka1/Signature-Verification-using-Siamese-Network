@@ -621,15 +621,20 @@
                         </form>
                     </div>
                 </div>
+
+
                 <div class="row mt-3">
                     <div class="col-3 mx-auto">
                         <button id="submitBtn1" type="button" class="btn btn-success">Upload</button>
                     </div>
                 </div>
+
             </div>
-            <div class="col-sm-8 error" id="error" >
-                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+
+            <div class="col-sm-8 error" id="error">
+                <p>under developing</p>
             </div>
+
 
             <div style=" padding-left: 218px"></div>
             <div class="col-sm-4">
@@ -643,15 +648,19 @@
                         </form>
                     </div>
                 </div>
+
                 <div class="row mt-3">
                     <div class="col-3 mx-auto">
                         <button id="submitBtn2" type="button" class="btn btn-success">Upload</button>
                     </div>
                 </div>
+
+                <div class="col-sm-8 error" id="error">
+                    <p>under developing</p>
+                </div>
+
             </div>
-            <div class="col-sm-8 error" id="error" >
-                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
-            </div>
+
         </div>
 
         <div class="row mt-3" style=" padding-left: 150px;padding-top: 30px">
@@ -716,7 +725,7 @@
 
                 console.log(data);
                 if (!data || data.length == 0) {
-                    $("#error").show();
+                    $("#error").hide();
                     return;
                 }
          
@@ -734,7 +743,7 @@
 
                 console.log(data);
                 if (!data || data.length == 0) {
-                    $("#error").show();
+                    $("#error").hide();
                     return;
                 }            
             });

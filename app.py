@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template
+from flask_cors import CORS
 import util
 image_data1 = None
 image_data2 = None
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/',methods=['GET','POST'])
 def main():

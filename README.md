@@ -33,12 +33,12 @@ Download Link: https://github.com/nileshchilka1/Signature-Verification-using-Sia
     pip install -r requirements.txt
    ```
    
- 4. Run app.py
-   
+4. Run app.py
+
    ```markdown
     python app.py
    ```
-   
+  
 ### Screenshots
    
    <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/ScreenShot1.PNG"

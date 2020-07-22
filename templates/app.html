@@ -660,6 +660,10 @@
         
         <div style=" padding-left: 360px;padding-top: 30px"> <h6> {{notupload}} </h6> </div>
         
+        <div class="col-sm-8 error" id="error" >
+                <p>under developing...</p>    
+        </div>
+        
 
     </div>
 
@@ -732,7 +736,7 @@
 
     $(document).ready(function () {
         console.log("ready!");
-        $("#error").hide();
+        $("#error").show();
 
         init();
     });

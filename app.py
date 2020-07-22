@@ -28,10 +28,13 @@ def signature_verification2():
 def verify():
     global image_data1
     global image_data2
-    result = util.verify(image_data1,image_data2)
-    image_data1 = None
-    image_data2 = None
-    return render_template('app.html', result=result)
+    if image_data1 is None or image_data2 is None:
+        return render_template('app.html', notupload='Upload the Image')
+    else:
+        result = util.verify(image_data1,image_data2)
+        image_data1 = None
+        image_data2 = None
+        return render_template('app.html', result=result)
 
 if __name__ == '__main__':
     

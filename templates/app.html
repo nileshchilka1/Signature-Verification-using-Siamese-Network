@@ -721,14 +721,6 @@
 
             $.post(url, {
                 image_data1: file.dataURL
-            }, function (data, status) {
-
-                console.log(data);
-                if (!data || data.length == 0) {
-                    $("#error").show();
-                    return;
-                }
-         
             });
         });
 
@@ -739,13 +731,6 @@
 
             $.post(url, {
                 image_data2: file.dataURL
-            }, function (data, status) {
-
-                console.log(data);
-                if (!data || data.length == 0) {
-                    $("#error").show();
-                    return;
-                }            
             });
         });
 

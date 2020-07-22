@@ -11,7 +11,7 @@ I started exploring in it and I not got any good repository of it. Then I made c
 Link: https://signature-verification-web-app.herokuapp.com/
 
 <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/web%20page.PNG"
-         alt = "HTML" height = "350" width = "450" />
+         alt = "HTML" height = "700" width = "1100" />
          
 ### Installation
 The Code is written in Python 3.7. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, follow below steps.
@@ -42,9 +42,9 @@ Download Link: https://github.com/nileshchilka1/Signature-Verification-using-Sia
 ### Screenshots
    
    <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/ScreenShot1.PNG"
-         alt = "HTML" height = "250" width = "300" />
+         alt = "HTML" height = "700" width = "1100" />
    <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/ScreenShot2.PNG"
-         alt = "HTML" height = "250" width = "300" />
+         alt = "HTML" height = "700" width = "1100" />
  
    
 ### Credits

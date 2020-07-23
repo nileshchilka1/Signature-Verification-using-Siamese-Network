@@ -705,21 +705,21 @@
         });
 
 
-        dz1.on("complete", function (file) {
+        dz1.on("complete", function (file1) {
 
-            var url = "https://signature-verification-web-app.herokuapp.com/signature_verification1";
+            var url1 = "https://signature-verification-web-app.herokuapp.com/signature_verification1";
 
-            $.post(url, {
-                image_data1: file.dataURL
+            $.post(url1, {
+                image_data1: file1.dataURL
             });
         });
 
-        dz2.on("complete", function (file) {
+        dz2.on("complete", function (file2) {
 
-            var url = "https://signature-verification-web-app.herokuapp.com/signature_verification2";
+            var url2 = "https://signature-verification-web-app.herokuapp.com/signature_verification2";
 
-            $.post(url, {
-                image_data2: file.dataURL
+            $.post(url2, {
+                image_data2: file2.dataURL
             });
         });
 

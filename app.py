@@ -15,26 +15,22 @@ def signature_verification1():
     global image_data1
     image_data1 = request.form['image_data1']
     
-    response = jsonify('done')
+    response1 = jsonify(image_data1)
 
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    
-    response.headers['Content-Length'] = 99999
+    response1.headers.add('Access-Control-Allow-Origin', '*')
 
-    return response
+    return response1
 
 @app.route('/signature_verification2', methods=['GET','POST'])
 def signature_verification2():
     global image_data2
     image_data2 = request.form['image_data2']
     
-    response = jsonify('done')
+    response2 = jsonify(image_data2)
 
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    response2.headers.add('Access-Control-Allow-Origin', '*')
     
-    response.headers['Content-Length'] = 99999
-    
-    return response
+    return response2
 
 @app.route('/verify', methods=['GET','POST'])
 def verify():

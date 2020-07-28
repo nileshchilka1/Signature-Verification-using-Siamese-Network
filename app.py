@@ -18,6 +18,8 @@ def signature_verification1():
     response = jsonify('done')
 
     response.headers.add('Access-Control-Allow-Origin', '*')
+    
+    response.headers['Content-Length'] = 99999
 
     return response
 
@@ -29,7 +31,9 @@ def signature_verification2():
     response = jsonify('done')
 
     response.headers.add('Access-Control-Allow-Origin', '*')
-
+    
+    response.headers['Content-Length'] = 99999
+    
     return response
 
 @app.route('/verify', methods=['GET','POST'])

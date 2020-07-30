@@ -16,20 +16,20 @@ def main():
         file1 = request.files["file1"].read()
         file2 = request.files["file2"].read()
         
-        #try:
+        try:
         
-        npimg1 = numpy.fromstring(file1, numpy.uint8)
-        npimg2 = numpy.fromstring(file2, numpy.uint8)
+            npimg1 = numpy.fromstring(file1, numpy.uint8)
+            npimg2 = numpy.fromstring(file2, numpy.uint8)
         
-        img1 = cv2.imdecode(npimg1, cv2.IMREAD_UNCHANGED)
-        img2 = cv2.imdecode(npimg2, cv2.IMREAD_UNCHANGED)
+            img1 = cv2.imdecode(npimg1, cv2.IMREAD_UNCHANGED)
+            img2 = cv2.imdecode(npimg2, cv2.IMREAD_UNCHANGED)
         
 
-        result = util.verify(img1,img2)
+            result = util.verify(img1,img2)
         
-        return render_template("index.html",result=result)
-        #except:
-            #return render_template("index.html",message='Upload only images')
+            return render_template("index.html",result=result)
+        except:
+            return render_template("index.html",message='Upload only images')
         
     return render_template("index.html")
 

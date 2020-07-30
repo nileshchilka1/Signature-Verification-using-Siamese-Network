@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Verfication</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="https://signature-verification-web-app.herokuapp.com/">Signature Verification</a>
+    </nav>
+
+
+    <div style=" padding-left: 585px; padding-top: 20px">
+        <p>
+            "Upload Signatures with only White Background"
+        </p>
+
+    </div>
+
+    <div style=" padding-left: 535px;padding-top: 50px ">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file1" />
+            <input type="file" name="file2" />
+            <div style=" padding-top: 100px; padding-left: 200px">
+                <input type="submit" />
+            </div>
+        </form>
+
+        <div style=" padding-left: 165px; padding-top: 20px">
+            <p>
+                {{message}}
+            </p>
+        </div>
+
+        <div style=" padding-left: 64px; padding-top: 20px">
+            <p>
+                {{result}}
+            </p>
+        </div>
+
+
+</body>
+</html>

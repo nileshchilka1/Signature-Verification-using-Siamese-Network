@@ -45,13 +45,15 @@ def verify(img1,img2):
     
     global model
     
+    load_saved_artifacts()
+    
     img1 = preprocess(img1)
     
     img2 = preprocess(img2)
     
-    encoding1 = img_to_encoding(img1,model)
+    encoding1 = img_to_encoding(img1)
     
-    encoding2 = img_to_encoding(img2,model)
+    encoding2 = img_to_encoding(img2)
     
     dist = round(np.linalg.norm(encoding2 - encoding1 , ord = 2),2)
     
@@ -93,9 +95,13 @@ def load_saved_artifacts():
 
 
 
-def img_to_encoding(img1, model):
+def img_to_encoding(img1):
     global graph
     global sess
+    global model
+    load_saved_artifacts()
+    
+    
     img = img1[...,::-1]
     img = np.around(np.transpose(img, (2,0,1))/255.0, decimals=12)
     x_train = np.array([img])

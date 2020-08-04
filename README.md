@@ -10,7 +10,7 @@ I started exploring in it and I not got any good repository of it. Then I made c
 ### Demo
 Link: https://signature-verification-web-app.herokuapp.com/
 
-<img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/web%20page.PNG"
+<img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/screenshots/webpage.png"
          alt = "HTML" height = "700" width = "1100" />
          
 ### Installation
@@ -41,9 +41,11 @@ Download Link: https://github.com/nileshchilka1/Signature-Verification-using-Sia
   
 ### Screenshots
    
-   <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/ScreenShot1.PNG"
+   <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/screenshots/Screenshot%20(1).png"
          alt = "HTML" height = "700" width = "1100" />
-   <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/ScreenShot2.PNG"
+   <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/screenshots/Screenshot%20(2).png"
+         alt = "HTML" height = "700" width = "1100" />
+   <img src = "https://github.com/nileshchilka1/Signature-Verification-using-Siamese-Network/blob/master/screenshots/Screenshot%20(3).png"
          alt = "HTML" height = "700" width = "1100" />
  
    

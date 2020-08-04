@@ -26,8 +26,10 @@ def main():
         
 
             result = util.verify(img1,img2)
-        
-            return render_template("index.html",result=result)
+            if result[19]=='s':
+                return render_template("index.html",result1=result)
+            else:
+                return render_template("index.html",result2=result)
         except:
             return render_template("index.html",message='Upload only images')
         

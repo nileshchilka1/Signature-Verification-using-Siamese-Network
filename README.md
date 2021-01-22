@@ -5,7 +5,7 @@ I developed Signature Verification model using Siamese Network and Triplet Loss
 
 ### Motivation
 Here, I developed Signature Verification model using Siamese Network. Actually, I was learning about One shot Learning using Siamese Network and Triplet Loss, while this instructor gave me an example of FaceNet Model for Face Recognition & Face Verification. After that I got an idea about implementing Signature Verification model.
-I explored & not got any good repository on it. Then I made changes in Network Architecture of FaceNet Model and implemented Signature Verification model.
+I explored & not got any good repository on it. Then I implemented Signature Verification model using Siamese Network and triplet loss.
 
 ### Demo
 Link: https://signature-verification-web-app.herokuapp.com/
@@ -50,7 +50,6 @@ Download Link: https://github.com/nileshchilka1/Signature-Verification-using-Sia
  
    
 ### Credits
-   https://github.com/iwantooxxoox
    
    [Shubham Kondekar](https://github.com/kondekarshubham123) helped me in creating web app.
    

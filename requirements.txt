@@ -41,7 +41,7 @@ protobuf==3.12.2
 Pygments==2.6.1
 pyreadline==2.1
 pyrsistent==0.16.0
-PyYAML==5.3.1
+PyYAML==5.4
 scipy==1.4.1
 six==1.14.0
 tensorboard==1.15.0
